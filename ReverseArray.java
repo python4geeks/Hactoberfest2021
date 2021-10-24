@@ -3,21 +3,15 @@ import java.util.Scanner;
 public class ReverseArray {
 	
 	public static void reverse(int[] a){
-	    
-		for (int i = 0; i < a.length/2; i++) {
-			
-			int n = a.length;
-			
-		    int tmp;
-		       
-		    tmp = a[i];
-		    
-		    a[i] = a[n-i-1];
-		    
-		    a[n-i-1]=tmp;
-			
-		}
-		
+	        int i = 0;
+	        int j = a.length-1;
+	        while(i<j){
+	        	int temp = a[i];
+	        	a[i] = a[j];
+	        	a[j] = temp;
+	            i++;
+	            j--;
+	        }	    
 	  }
 	
 	private static void Display(int arr[])
